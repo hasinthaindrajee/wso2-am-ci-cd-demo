@@ -1,5 +1,6 @@
 #!/bin/sh
 
+chmod +x /Users/hasinthaindrajee/Downloads/apimcli/apimcli
 echo $(which apimcli)
 bash /Users/hasinthaindrajee/Downloads/apimcli/apimcli version
 
