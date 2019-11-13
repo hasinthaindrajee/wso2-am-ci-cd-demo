@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Test'
-                sh 'bash /Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh '/Users/Shared/Jenkins/Home/workspace/cicd/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
         stage('Deploy to Production') {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Production'
-                sh 'bash /Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh '/Users/Shared/Jenkins/Home/workspace/cicd/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
     }
