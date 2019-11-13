@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Test'
-                sh 'apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh '/Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
         stage('Deploy to Production') {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Production'
-                sh 'apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh '/Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
     }
