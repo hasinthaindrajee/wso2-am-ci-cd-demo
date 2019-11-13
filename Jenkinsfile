@@ -8,7 +8,7 @@ pipeline {
         stage('Setup APIM Environments'){
             steps{
                 withCredentials([usernamePassword(credentialsId: 'apim', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh './config.sh'
+                    sh 'bash ./config.sh'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Test'
-                sh '/Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh 'bash /Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
         stage('Deploy to Production') {
@@ -29,7 +29,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying to Production'
-                sh '/Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
+                sh 'bash /Users/hasinthaindrajee/Downloads/apimcli/apimcli import-api -f $API -e $ENV -k --preserve-provider=false --update --verbose'
             }
         }
     }
