@@ -1,12 +1,12 @@
 #!/bin/sh
 
 echo $(which apimcli)
-bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli version
+/Users/Shared/Jenkins/Home/workspace/cicd/apimcli version
 
 rm -rf $HOME/.wso2apimcli
 
 echo 'setting up test environment'
-bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n test \
+/Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n test \
                     --registration https://localhost:9444/client-registration/v0.14/register \
                     --apim https://localhost:9444 \
                     --token https://localhost:8244/token \
@@ -15,10 +15,10 @@ bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n test \
                     --api_list https://localhost:9444/api/am/publisher/v0.14/apis \
                     --app_list https://localhost:9444/api/am/store/v0.14/applications
 echo 'logging into test'
-bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli login test -u $USERNAME -p $PASSWORD -k
+/Users/Shared/Jenkins/Home/workspace/cicd/apimcli login test -u $USERNAME -p $PASSWORD -k
 
 echo 'setting up prod environment'
-bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n prod \
+/Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n prod \
                     --registration https://localhost:9445/client-registration/v0.14/register \
                     --apim https://localhost:9445 \
                     --token https://localhost:8245/token \
@@ -27,4 +27,4 @@ bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli add-env -n prod \
                     --api_list https://localhost:9445/api/am/publisher/v0.14/apis \
                     --app_list https://localhost:9445/api/am/store/v0.14/applications
 echo 'logging into prod'
-bash /Users/Shared/Jenkins/Home/workspace/cicd/apimcli login prod -u $USERNAME -p $PASSWORD -k
+/Users/Shared/Jenkins/Home/workspace/cicd/apimcli login prod -u $USERNAME -p $PASSWORD -k
