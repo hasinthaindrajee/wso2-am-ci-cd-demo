@@ -391,8 +391,6 @@
   "monetizationProperties": {},
   "isMonetizationEnabled": false,
   "environmentList": [
-    "SANDBOX",
-    "PRODUCTION"
   ],
   "apiSecurity": "oauth2,oauth_basic_auth_mandatory",
   "endpoints": [],
