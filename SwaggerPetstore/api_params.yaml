@@ -11,7 +11,7 @@ environments:
         url: 'https://test.wso2.com'
         config:
           retryTimeOut: $RETRY
-    gatewayEnvironments
+    gatewayEnvironments:
       - Production and Sandbox
   - name: prod
     endpoints:
