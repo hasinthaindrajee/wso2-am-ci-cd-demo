@@ -1,0 +1,21 @@
+environments:
+  - name: dev
+    endpoints:
+      production:
+        url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
+        config:
+          retryTimeOut: $RETRY
+  - name: test
+    endpoints:
+      production:
+        url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
+        config:
+          retryTimeOut: $RETRY
+    gatewayEnvironments:
+      - newgwone
+  - name: prod
+    endpoints:
+      production:
+        url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
+        config:
+          retryTimeOut: $RETRY
