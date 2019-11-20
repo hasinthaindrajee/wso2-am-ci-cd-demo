@@ -1,0 +1,100 @@
+{
+  "id": {
+    "providerName": "admin",
+    "apiName": "CreateStudentProduct",
+    "version": "1.0.0"
+  },
+  "uuid": "b4150e0f-2938-4e46-8c86-a2a0cd22eddf",
+  "type": "HTTP",
+  "context": "/create_student_product/1.0.0",
+  "contextTemplate": "/create_student_product/{version}",
+  "tags": [],
+  "documents": [],
+  "lastUpdated": "Nov 15, 2019 12:09:50 PM",
+  "availableTiers": [
+    {
+      "name": "Unlimited",
+      "displayName": "Unlimited",
+      "description": "Allows unlimited requests",
+      "requestsPerMin": 2147483647,
+      "requestCount": 2147483647,
+      "unitTime": 0,
+      "timeUnit": "ms",
+      "tierPlan": "FREE",
+      "stopOnQuotaReached": true
+    }
+  ],
+  "availableSubscriptionLevelPolicies": [],
+  "uriTemplates": [
+    {
+      "uriTemplate": "/onlinePolicyCreate",
+      "httpVerb": "POST",
+      "authType": "Any",
+      "httpVerbs": [
+        "POST"
+      ],
+      "authTypes": [
+        "Any"
+      ],
+      "throttlingConditions": [],
+      "throttlingTier": "Unlimited",
+      "throttlingTiers": [
+        "Unlimited"
+      ],
+      "mediationScript": "null",
+      "scopes": [
+        null
+      ],
+      "mediationScripts": {}
+    }
+  ],
+  "apiHeaderChanged": false,
+  "apiResourcePatternsChanged": false,
+  "status": "PUBLISHED",
+  "visibility": "restricted",
+  "visibleRoles": "Internal/publisher",
+  "endpointSecured": false,
+  "endpointAuthDigest": false,
+  "transports": "http,https",
+  "advertiseOnly": false,
+  "corsConfiguration": {
+    "corsConfigurationEnabled": false,
+    "accessControlAllowOrigins": [
+      "*"
+    ],
+    "accessControlAllowCredentials": false,
+    "accessControlAllowHeaders": [
+      "authorization",
+      "Access-Control-Allow-Origin",
+      "Content-Type",
+      "SOAPAction"
+    ],
+    "accessControlAllowMethods": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE",
+      "PATCH",
+      "OPTIONS"
+    ]
+  },
+  "endpointConfig": "{\"production_endpoints\":{\"url\":\"http://flex.dev.mdu.local:7080/Jasper/StudentPolicyCreateJax\",\"endpoint_type\":\"address\",\"template_not_supported\":false,\"config\":{\"format\":\"soap11\",\"optimize\":\"leave-as-is\",\"actionSelect\":\"fault\",\"actionDuration\":\"30000\"}},\"endpoint_type\":\"address\"}",
+  "responseCache": "Disabled",
+  "cacheTimeout": 300,
+  "implementation": "ENDPOINT",
+  "scopes": [],
+  "isDefaultVersion": false,
+  "isPublishedDefaultVersion": false,
+  "environments": [
+    "Production and Sandbox"
+  ],
+  "createdTime": "1573749053501",
+  "additionalProperties": {},
+  "environmentList": [
+    "PRODUCTION"
+  ],
+  "apiSecurity": "oauth2",
+  "accessControl": "all",
+  "rating": 0.0,
+  "isLatest": true
+}
