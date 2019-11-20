@@ -5,8 +5,6 @@ environments:
         url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
         config:
           retryTimeOut: $RETRY
-    gatewayEnvironments:
-      - newgw
   - name: prod
     endpoints:
       production:
