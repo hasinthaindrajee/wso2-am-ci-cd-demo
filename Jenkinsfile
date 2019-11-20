@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
-        API = './export-1'
+        API = './CreateStudentProduct-1.0.0'
     }
     stages {
         stage('Setup APIM Environments'){

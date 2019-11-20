@@ -1,0 +1,132 @@
+<header description="SOAPAction" name="SOAPAction" scope="transport" value=""/>
+<property name="REST_URL_POSTFIX" scope="axis2" action="remove"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.medicalschool)" name="req.var.OnlinePolicyCreate.inDTO.medicalschool"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.extpolno)" name="req.var.OnlinePolicyCreate.inDTO.extpolno"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.mduNumber)" name="req.var.OnlinePolicyCreate.inDTO.mduNumber"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.currentFeatureType)" name="req.var.OnlinePolicyCreate.header.currentFeatureType"/>
+<property expression="json-eval($.OnlinePolicyCreate.sessionEGUID)" name="req.var.OnlinePolicyCreate.sessionEGUID"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.product)" name="req.var.OnlinePolicyCreate.inDTO.product"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.subsegment)" name="req.var.OnlinePolicyCreate.inDTO.subsegment"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.userLang)" name="req.var.OnlinePolicyCreate.inDTO.userLang"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.sessionID)" name="req.var.OnlinePolicyCreate.header.sessionID"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.dateFormat)" name="req.var.OnlinePolicyCreate.header.dateFormat"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.parentRefTypeCode)" name="req.var.OnlinePolicyCreate.header.parentRefTypeCode"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.duedate)" name="req.var.OnlinePolicyCreate.inDTO.duedate"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.hierarchy)" name="req.var.OnlinePolicyCreate.header.hierarchy"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.busnessrc)" name="req.var.OnlinePolicyCreate.inDTO.busnessrc"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.schemeManagerKey)" name="req.var.OnlinePolicyCreate.header.schemeManagerKey"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.agent)" name="req.var.OnlinePolicyCreate.inDTO.agent"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.internshipInd)" name="req.var.OnlinePolicyCreate.inDTO.internshipInd"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.securityToken)" name="req.var.OnlinePolicyCreate.header.securityToken"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.liaisonmanager)" name="req.var.OnlinePolicyCreate.inDTO.liaisonmanager"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.schemeManagerTimeZone)" name="req.var.OnlinePolicyCreate.header.schemeManagerTimeZone"/>
+<property expression="json-eval($.OnlinePolicyCreate.platformId)" name="req.var.OnlinePolicyCreate.platformId"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.effectdte)" name="req.var.OnlinePolicyCreate.inDTO.effectdte"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.userid)" name="req.var.OnlinePolicyCreate.inDTO.userid"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.datastore)" name="req.var.OnlinePolicyCreate.header.datastore"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.locale)" name="req.var.OnlinePolicyCreate.header.locale"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.parentRef)" name="req.var.OnlinePolicyCreate.header.parentRef"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.segment)" name="req.var.OnlinePolicyCreate.inDTO.segment"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.dentalschool)" name="req.var.OnlinePolicyCreate.inDTO.dentalschool"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.subcoy)" name="req.var.OnlinePolicyCreate.inDTO.subcoy"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.dynamicContent)" name="req.var.OnlinePolicyCreate.header.dynamicContent"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.currentFeatureID)" name="req.var.OnlinePolicyCreate.header.currentFeatureID"/>
+<property expression="json-eval($.OnlinePolicyCreate.header.username)" name="req.var.OnlinePolicyCreate.header.username"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.dcpschool)" name="req.var.OnlinePolicyCreate.inDTO.dcpschool"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.billplan)" name="req.var.OnlinePolicyCreate.inDTO.billplan"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.client)" name="req.var.OnlinePolicyCreate.inDTO.client"/>
+<property expression="json-eval($.OnlinePolicyCreate.inDTO.company)" name="req.var.OnlinePolicyCreate.inDTO.company"/>
+
+
+<payloadFactory description="transform" media-type="xml">
+  <format>
+  <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://com.innovation">
+  <soapenv:Header/>
+  <soapenv:Body>
+  	<web:OnlinePolicyCreate xmlns:web="http://com.innovation">
+   <inDTO xmlns="">
+      <medicalschool>$1</medicalschool>
+      <extpolno>$2</extpolno>
+      <mduNumber>$3</mduNumber>
+      <product>$6</product>
+      <subsegment>$7</subsegment>
+      <userLang>$8</userLang>
+      <duedate>$12</duedate>
+      <busnessrc>$14</busnessrc>
+      <agent>$16</agent>
+      <internshipInd>$17</internshipInd>
+      <liaisonmanager>$19</liaisonmanager>
+      <effectdte>$22</effectdte>
+      <userid>$23</userid>
+      <segment>$27</segment>
+      <dentalschool>$28</dentalschool>
+      <subcoy>$29</subcoy>
+      <dcpschool>$33</dcpschool>
+      <billplan>$34</billplan>
+      <client>$35</client>
+      <company>$36</company>
+   </inDTO>
+   <header xmlns="">
+      <currentFeatureType>$4</currentFeatureType>
+      <sessionID>$9</sessionID>
+      <dateFormat>$10</dateFormat>
+      <parentRefTypeCode>$11</parentRefTypeCode>
+      <hierarchy>$13</hierarchy>
+      <schemeManagerKey>$15</schemeManagerKey>
+      <securityToken>$18</securityToken>
+      <schemeManagerTimeZone>$20</schemeManagerTimeZone>
+      <datastore>$24</datastore>
+      <locale>$25</locale>
+      <parentRef>$26</parentRef>
+      <dynamicContent>$30</dynamicContent>
+      <currentFeatureID>$31</currentFeatureID>
+      <username>$32</username>
+   </header>
+   <sessionEGUID xmlns="">$5</sessionEGUID>
+   <platformId xmlns="">$21</platformId>
+</web:OnlinePolicyCreate>
+
+  </soapenv:Body>
+  </soapenv:Envelope>
+  </format>
+  <args>
+ 	<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.medicalschool')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.extpolno')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.mduNumber')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.currentFeatureType')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.sessionEGUID')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.product')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.subsegment')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.userLang')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.sessionID')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.dateFormat')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.parentRefTypeCode')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.duedate')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.hierarchy')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.busnessrc')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.schemeManagerKey')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.agent')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.internshipInd')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.securityToken')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.liaisonmanager')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.schemeManagerTimeZone')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.platformId')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.effectdte')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.userid')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.datastore')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.locale')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.parentRef')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.segment')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.dentalschool')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.subcoy')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.dynamicContent')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.currentFeatureID')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.header.username')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.dcpschool')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.billplan')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.client')"/>
+<arg evaluator="xml" expression="get-property('req.var.OnlinePolicyCreate.inDTO.company')"/>
+
+  </args>
+</payloadFactory>
+<property description="messageProperty" name="messageType" scope="axis2" type="STRING" value="text/xml"/>
