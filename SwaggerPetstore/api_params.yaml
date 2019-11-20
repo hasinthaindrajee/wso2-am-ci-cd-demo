@@ -1,8 +1,14 @@
 environments:
+  - name: dev
+    endpoints:
+      production:
+        url: 'https://dev.wso2.com'
+        config:
+          retryTimeOut: $RETRY
   - name: test
     endpoints:
       production:
-        url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
+        url: 'https://test.wso2.com'
         config:
           retryTimeOut: $RETRY
     gatewayEnvironments:
@@ -10,6 +16,6 @@ environments:
   - name: prod
     endpoints:
       production:
-        url: 'http://ws.cdyne.com/phoneverify/phoneverify.asmx'
+        url: 'https://prod.wso2.com'
         config:
           retryTimeOut: $RETRY

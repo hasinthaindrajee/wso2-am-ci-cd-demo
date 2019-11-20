@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         CI = 'true'
-        API = './CreateStudentProduct-1.0.0'
+        API = './SwaggerPetstore'
     }
     stages {
         stage('Setup APIM Environments'){
