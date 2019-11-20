@@ -1,16 +1,16 @@
 {
   "id": {
     "providerName": "admin",
-    "apiName": "export",
-    "version": "1"
+    "apiName": "CreateStudentProduct",
+    "version": "1.0.0"
   },
-  "uuid": "47efbf31-3550-4cce-874c-0abb654e0a38",
+  "uuid": "b4150e0f-2938-4e46-8c86-a2a0cd22eddf",
   "type": "HTTP",
-  "context": "/exp/1",
-  "contextTemplate": "/exp/{version}",
+  "context": "/create_student_product/1.0.0",
+  "contextTemplate": "/create_student_product/{version}",
   "tags": [],
   "documents": [],
-  "lastUpdated": "Nov 15, 2019 9:24:53 AM",
+  "lastUpdated": "Nov 15, 2019 12:09:50 PM",
   "availableTiers": [
     {
       "name": "Unlimited",
@@ -27,28 +27,7 @@
   "availableSubscriptionLevelPolicies": [],
   "uriTemplates": [
     {
-      "uriTemplate": "/checkPhoneNumbers",
-      "httpVerb": "POST",
-      "authType": "Any",
-      "httpVerbs": [
-        "POST"
-      ],
-      "authTypes": [
-        "Any"
-      ],
-      "throttlingConditions": [],
-      "throttlingTier": "Unlimited",
-      "throttlingTiers": [
-        "Unlimited"
-      ],
-      "mediationScript": "null",
-      "scopes": [
-        null
-      ],
-      "mediationScripts": {}
-    },
-    {
-      "uriTemplate": "/checkPhoneNumber",
+      "uriTemplate": "/onlinePolicyCreate",
       "httpVerb": "POST",
       "authType": "Any",
       "httpVerbs": [
@@ -72,7 +51,8 @@
   "apiHeaderChanged": false,
   "apiResourcePatternsChanged": false,
   "status": "PUBLISHED",
-  "visibility": "public",
+  "visibility": "restricted",
+  "visibleRoles": "Internal/publisher",
   "endpointSecured": false,
   "endpointAuthDigest": false,
   "transports": "http,https",
@@ -98,7 +78,7 @@
       "OPTIONS"
     ]
   },
-  "endpointConfig": "{\"production_endpoints\":{\"url\":\"http://ws.cdyne.com/phoneverify/phoneverify.asmx\",\"config\":null,\"template_not_supported\":false},\"endpoint_type\":\"http\"}",
+  "endpointConfig": "{\"production_endpoints\":{\"url\":\"http://flex.dev.mdu.local:7080/Jasper/StudentPolicyCreateJax\",\"endpoint_type\":\"address\",\"template_not_supported\":false,\"config\":{\"format\":\"soap11\",\"optimize\":\"leave-as-is\",\"actionSelect\":\"fault\",\"actionDuration\":\"30000\"}},\"endpoint_type\":\"address\"}",
   "responseCache": "Disabled",
   "cacheTimeout": 300,
   "implementation": "ENDPOINT",
@@ -108,7 +88,7 @@
   "environments": [
     "Production and Sandbox"
   ],
-  "createdTime": "1573809862622",
+  "createdTime": "1573749053501",
   "additionalProperties": {},
   "environmentList": [
     "PRODUCTION"
