@@ -1,4 +1,4 @@
-# CI/CD Pipeline for WSO2 API Manager with Jenkins.
+# CI/CD Pipeline for WSO2 API Manager with Jenkins..
 
 This repository contains demo files for creating a CI/CD pipeline for APIs with WSO2 API Manager with Jenkins.
 
